@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para minha princesa</title>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: red;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .painel {
+      margin: auto;
+      margin-top: 80px;
+      background-color: white;
+      width: 90rem;
+      height: auto;
+      border-radius: 20px;
+      text-align: center;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    .painel h1 {
+      font-weight: normal;
+    }
+
+    .mensagem {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+      padding: 0 20px;
+    }
+
+    .video-responsivo {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 35rem;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto 20px auto;
+      box-sizing: border-box;
+    }
+
+    /* Botões */
+    #sim {
+      height: 40px;
+      width: 60px;
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      margin-left: -75px;
+    }
+
+    #nao {
+      position: absolute;
+      height: 40px;
+      width: 60px;
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      margin-left: 10px;
+    }
+
+    /* Responsivo para celulares grandes */
+    @media (max-width: 600px) {
+      .painel {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+
+    /* Responsivo para tablets */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .painel {
+        width: 70%;
+        padding: 40px;
+      }
+    }
+
+    /* Responsivo para celulares pequenos (ex: 400px ou menos) */
+    @media (max-width: 400px) {
+      .painel {
+        width: 95%;
+        padding: 20px 10px;
+      }
+
+      .painel h1 {
+        font-size: 20px;
+      }
+
+      .mensagem {
+        font-size: 14px;
+      }
+
+      #sim,
+      #nao {
+        width: 50px;
+        height: 35px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="painel">
+    <h1>💞🥰️Te amo minha princesa🥰️💞</h1>
+
+    <video class="video-responsivo" controls>
+      <source src="./assets2/romantic.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <p class="mensagem">
+      <i>
+        Oh meu amor, hoje é uma data tão importante para mim, para nós.
+        Quero aproveitar cada palavra para te lembrar o quanto você significa para mim.
+        Comemorar o nosso primeiro Dia dos Namorados juntinhos é mais que uma alegria.
+        <br><br>
+        Minha princesa, obrigado por ser essa mulher incrível que você é,
+        uma pessoa determinada que sempre não se deixa vencer pelos obstáculos da vida.
+        Obrigado por me ensinar tanto sobre o amor e sobre como ser melhor a cada dia,
+        não só por mim, mas por nós.
+        <br><br>
+        Sou grato por cada risada, cada conversa, por cada olhar trocado.
+        Desde então, cada dia contigo é um presente que eu guardo com o maior carinho.
+        Amar você é fácil. É natural, leve, como se meu coração sempre soubesse que o seu era o destino dele.
+        <br><br>
+        E mesmo quando enfrentamos dificuldades, é com você que eu quero estar,
+        porque sei que juntos somos mais fortes.
+        Você é minha parceira de verdade, meu apoio, minha melhor amiga, meu amor.
+        Você é, sem dúvida, o maior presente que a vida me deu, meu neném.
+        <br><br>
+        Que esse Dia dos Namorados seja apenas mais um capítulo da nossa história,
+        e que venham muitos outros, sempre com amor, respeito e cumplicidade.
+        <br><br>
+        Te amo mais do que consigo escrever, e te prometo: meu coração sempre será seu. 💘
+        Ter você comigo é como viver num sonho bom do qual eu nunca quero acordar.💍💕
+      </i>
+      <br><br>
+      <strong>Ass.: Com todo amor e carinho, Gabriel S.</strong>
+    </p>
+  </div>
+
+  <script>
+    function fuja() {
+      const botaonao = document.getElementById("nao");
+      const larguraJanela = window.innerWidth;
+      const alturaJanela = window.innerHeight;
+
+      const maxX = larguraJanela - botaonao.offsetWidth;
+      const maxY = alturaJanela - botaonao.offsetHeight;
+
+      const aleatorioX = Math.floor(Math.random() * maxX);
+      const aleatorioY = Math.floor(Math.random() * maxY);
+
+      botaonao.style.left = aleatorioX + "px";
+      botaonao.style.top = aleatorioY + "px";
+    }
+  </script>
+</body>
+</html>

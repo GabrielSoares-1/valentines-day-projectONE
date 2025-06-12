@@ -1,0 +1,11 @@
+.video-responsivo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 220px; /* limite vertical opcional */
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 20px auto;
+  box-sizing: border-box;
+}
+

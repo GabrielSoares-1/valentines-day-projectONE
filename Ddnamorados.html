@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para minha princesa</title>
+
+    <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            body {
+            background-color: red;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            .painel {
+            margin: 55px auto;
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 90px 20px;
+            }
+
+            .painel h1 {
+            font-size: 29px;
+            margin-bottom: 20px;
+            }
+
+            .painel h3 {
+            font-size: 20px;
+            margin: 20px 0;
+            }
+
+            .painel img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 12px;
+            }
+
+            #sim, #nao {
+            height: 40px;
+            width: 70px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            margin-left: -1rem;
+            }
+
+            #sim {
+            margin-right: 70px;
+            }
+
+            #nao {
+            position: absolute;
+            margin-left: -4rem;
+            }
+
+            @media (max-width: 600px) {
+            .painel {
+                padding: 20px 15px;
+            }
+
+            .painel h1 {
+                font-size: 20px;
+            }
+
+            .painel h3 {
+                font-size: 16px;
+            }
+
+            #sim, #nao {
+                width: 50px;
+                height: 35px;
+                font-size: 14px;
+            }
+            }
+    </style>
+
+    </head>
+
+    <body>
+
+    <div class="painel">
+            <h1>🥰️Feliz Dia dos Namorados Minha Princesa🥰️</h1>
+
+            <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="ursinho apaixonado" />
+
+            <h3>Aceita ser meu amorzinho para todo sempre?</h3>
+
+            <a href="./newpage1.html"><button id="sim">Sim!</button></a>
+            <button onmouseover="fuja()" id="nao">Não!</button>
+    </div>
+
+    <script>
+            function fuja() {
+            const botaonao = document.getElementById("nao");
+
+            const larguraJanela = window.innerWidth;
+            const alturaJanela = window.innerHeight;
+
+            const maxX = larguraJanela - botaonao.offsetWidth;
+            const maxY = alturaJanela - botaonao.offsetHeight;
+
+            const aleatorioX = Math.floor(Math.random() * maxX);
+            const aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaonao.style.left = aleatorioX + "px";
+            botaonao.style.top = aleatorioY + "px";
+            }
+    </script>
+    </body>
+</html>
